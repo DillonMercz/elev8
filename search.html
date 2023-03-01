@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html>
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>Category Search</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		h1 {
-			margin-top: 0;
-			padding: 20px;
-			background-color: #333;
-			color: #fff;
-			text-align: center;
-		}
-		.container {
+    <meta charset="UTF-8">
+    <title> Oishii - Fine Japanese Cuisine</title>
+    <meta name="description" content="Oishii - Fine Japanese Cuisine ">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <div class="navbar-left logo">
+                    <img src="https://i.imgur.com/DVbdCW5.png" heigth="75px" width="75px">
+                </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Menu</a></li>
+                    <li><a href="#contact">Reserve</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <style>
+        .ho{
+    		margin-top:100px;
+    	}
+		.container1 {
 			margin: 20px;
 			display: flex;
-			flex-wrap: wrap;
-			align-items: flex-start;
+			flex-direction: column;
+			align-items: center;
 			justify-content: center;
+			width:40%;
 		}
 		.category {
 			margin: 10px;
 			padding: 10px;
+			margin-bottom:20px;
 			background-color: #f2f2f2;
-			border-radius: 5px;
-			box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 			text-align: center;
 			cursor: pointer;
 			transition: all 0.2s ease-in-out;
+			min-width: 183px;
+			max-width: 183px;
 		}
 		.category:hover {
 			transform: scale(1.05);
-			box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+			min-width: 183px;
+			max-width: 183px;
 		}
 		.subcategory {
-			margin: 5px;
-			padding: 5px;
+			margin: 10px;
+			padding: 15px;
 			background-color: #ddd;
 			border-radius: 3px;
 			box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -64,111 +88,270 @@
 			max-width: 100%;
 			font-size: 16px;
 		}
+		.hidden{
+			display: none;
+		}
+		body{
+			font-family: "Arial" !important;
+		}
 	</style>
-</head>
-<body>
-	<h1>Category Search</h1>
-	<div class="search-container">
-		<input type="text" placeholder="Search categories..." class="search-box">
-	</div>
-	<div class="container">
-		<div class="category" data-category="Pressure Washing">
-			<h3>Pressure Washing</h3>
-		</div>
-		<div class="category" data-category="Flooring">
-			<h3>Flooring</h3>
-		</div>
-		<div class="category" data-category="Landscaping">
-			<h3>Landscaping</h3>
-		</div>
-		<div class="category" data-category="Roofing">
-			<h3>Roofing</h3>
-		</div>
-	</div>
-	<script>
-		const categories = [
-  {
-    "name": "Pressure Washing",
-    "subcategories": [
-      "Driveway",
-      "Patio",
-      "Pool Deck",
-      "Sidewalk",
-      "Fence",
-      "House Exterior"
-    ]
-  },
-  {
-    "name": "Flooring",
-    "subcategories": [
-      "Vinyl",
-      "Tile",
-      "Epoxy",
-      "Laminate",
-      "Hardwood"
-    ]
-  },
-  {
-    "name": "Landscaping",
-    "subcategories": [
-	 	"Lawn care",
-	    "Garden design",
-	    "Hardscaping",
-	    "Tree care",
-	    "Irrigation",
-	    "Landscape maintenance",
-	    "Landscaping installation",
-	    "Outdoor living spaces",
-	    "Water features",
-	    "Landscape lighting"
-    ]
-  },
-  {
-    "name": "Roofing",
-    "subcategories": [
-		"Roof repair",
-		"Roof replacement",
-		"Roof installation",
-		"Gutter installation and repair",
-		"Skylight installation and repair",
-		"Roof cleaning and maintenance",
-		"Chimney repair and maintenance",
-		"Emergency roof repair"
-    ]
-  }
-]
-	const categoryElements = document.querySelectorAll(".category");
-	const searchBox = document.querySelector(".search-box");
+    <div class="website-content-pussy-ass ho">
+        <div class="search-container">
+            <input type="text" placeholder="Search Services..." class="search-box">
+        </div>
+        <center>
+            <div class="container1">
+                <div class="category" data-category="Pressure Washing">
+                    <h3>Pressure Washing</h3>
+                </div>
+                <div class="category" data-category="Flooring">
+                    <h3>Flooring</h3>
+                </div>
+                <div class="category" data-category="Landscaping">
+                    <h3>Landscaping</h3>
+                </div>
+                <div class="category" data-category="Roofing">
+                    <h3>Roofing</h3>
+                </div>
+                <div class="category" data-category="Air Conditioning">
+                    <h3>Air Conditioning</h3>
+                </div>
+                <div class="category" data-category="Plumbing">
+                    <h3>Plumbing</h3>
+                </div>
+                <div class="category" data-category="Electrical">
+                    <h3>Electrical</h3>
+                </div>
+                <div class="category" data-category="Pool Services">
+                    <h3>Pool Services</h3>
+                </div>
+                <div class="category" data-category="Pest Control">
+                    <h3>Pest Control</h3>
+                </div>
+                                <div class="category" data-category="Handyman">
+                    <h3>Handyman</h3>
+                </div>
+                                <div class="category" data-category="Cleaning">
+                    <h3>Cleaning</h3>
+                </div>
+            </div>
+        </center>
+    </div>
+    <script>
+    const categories = [{
+            "name": "Pressure Washing",
+            "subcategories": [
+                "Driveway",
+                "Patio",
+                "Pool Deck",
+                "Sidewalk",
+                "Fence",
+                "House Exterior",
+                "Roof",
+                "Boat Dock"
+            ]
+        },
 
-	// Add subcategories to each category
-	categoryElements.forEach(category => {
-		const categoryName = category.dataset.category;
-		console.log(categoryName)
-		const subcategories = categories.find(category => category.name === categoryName).subcategories;
-		const subcategoryElements = subcategories.map(subcategory => {
-			const subcategoryElement = document.createElement("div");
-			subcategoryElement.classList.add("subcategory");
-			subcategoryElement.textContent = subcategory;
-			subcategoryElement.addEventListener("click", () => {
-				console.log(`Selected ${subcategory} in ${categoryName}`);
-			});
-			return subcategoryElement;
-		});
-		category.append(...subcategoryElements);
-	});
+        {
+            "name": "Flooring",
+            "subcategories": [
+                "Vinyl",
+                "Tile",
+                "Epoxy",
+                "Laminate",
+                "Hardwood",
+                "Carpet",
+                "Terrazzo"
+            ]
+        },
+        {
+            "name": "Landscaping",
+            "subcategories": [
+                "Lawn care",
+                "Garden design",
+                "Hardscaping",
+                "Tree care",
+                "Irrigation",
+                "Landscape maintenance",
+                "Landscaping installation",
+                "Outdoor living spaces",
+                "Water features",
+                "Landscape lighting",
+                "Pool Landscaping",
+                "Xeriscaping",
+                "Artificial Turf",
+                "Sod Installation",
+                "Mulching",
+                "Planting",
+                "Tree Trimming",
+                "Stump Grinding",
+                "Weed Control",
+                "Pest Control",
+                "Fertilization",
+                "Seasonal Cleanups"
+            ]
+        },
+        {
+            "name": "Handyman",
+            "subcategories": [
+                "Painting and Staining",
+                "Drywall Repair and Installation",
+                "Furniture Assembly",
+                "General Home Repairs",
+                "Window Repair and Installation",
+                "Door Repair and Installation",
+                "Caulking and Weatherstripping",
+                "Tile and Grout Installation and Repair",
+                "Pressure Washing"
+            ]
+        },
+        {
+            "name": "Cleaning",
+            "subcategories": [
+                "House Cleaning",
+                "Carpet Cleaning",
+                "Upholstery Cleaning",
+                "Window Cleaning",
+                "Deep Cleaning",
+                "Move-In/Move-Out Cleaning",
+                "Commercial Cleaning",
+                "Disinfecting and Sanitizing",
+                "Maid Services"
+            ]
+        },
+        {
+            "name": "Roofing",
+            "subcategories": [
+                "Roof repair",
+                "Roof replacement",
+                "Roof installation",
+                "Gutter installation and repair",
+                "Skylight installation and repair",
+                "Roof cleaning and maintenance",
+                "Chimney repair and maintenance",
+                "Emergency roof repair",
+                "Flat Roofing",
+                "Metal Roofing",
+                "Tile Roofing",
+                "Shingle Roofing"
+            ]
+        },
+        {
+            "name": "Air Conditioning",
+            "subcategories": [
+                "AC Repair",
+                "AC Installation",
+                "AC Maintenance",
+                "Duct Cleaning",
+                "Thermostat Installation",
+                "Indoor Air Quality",
+                "Commercial AC Services",
+                "Emergency AC Services",
+                "Heat Pump Services"
+            ]
+        },
+        {
+            "name": "Plumbing",
+            "subcategories": [
+                "Water Heater Repair and Installation",
+                "Drain Cleaning",
+                "Toilet Repair and Installation",
+                "Faucet Repair and Installation",
+                "Garbage Disposal Repair and Installation",
+                "Sump Pump Repair and Installation",
+                "Leak Detection and Repair",
+                "Backflow Prevention",
+                "Hydro Jetting",
+                "Gas Line Services"
+            ]
+        },
+        {
+            "name": "Electrical",
+            "subcategories": [
+                "Electrical Repairs",
+                "Electrical Panel Upgrades",
+                "Electrical Installations",
+                "Lighting Installations and Repairs",
+                "Ceiling Fan Installations",
+                "Generators",
+                "Surge Protection",
+                "Electrical Inspections",
+                "Emergency Electrical Services"
+            ]
+        },
+        {
+            "name": "Pest Control",
+            "subcategories": [
+                "Termite Inspection and Treatment",
+                "Bed Bug Treatment",
+                "Ant Control",
+                "Rodent Control",
+                "Mosquito Control",
+                "Spider Control",
+                "Flea and Tick Treatment",
+                "Wildlife Control",
+                "Bee and Wasp Removal"
+            ]
+        },
+        {
+            "name": "Pool Services",
+            "subcategories": [
+                "Pool Cleaning",
+                "Pool Maintenance",
+                "Pool Repair",
+                "Pool Renovation",
+                "Pool Resurfacing",
+                "Pool Decking",
+                "Pool Heating",
+                "Saltwater Pool Services",
+                "Commercial Pool Services",
+                "Emergency Pool Services",
+                "Pool Leak Detection and Repair",
+                "Pool Equipment Repair and Replacement",
+                "Pool Lighting Installation and Repair"
+            ]
+        }
+    ]
+    const categoryElements = document.querySelectorAll(".category");
+    const searchBox = document.querySelector(".search-box");
 
-	// Add search functionality
-	searchBox.addEventListener("input", () => {
-		const searchTerm = searchBox.value.toLowerCase();
-		categoryElements.forEach(category => {
-			const categoryName = category.dataset.category.toLowerCase();
-			if (categoryName.includes(searchTerm)) {
-				category.style.display = "block";
-			} else {
-				category.style.display = "none";
-			}
-		});
-	});
-</script>
+    // Add subcategories to each category
+    categoryElements.forEach(category => {
+        const categoryName = category.dataset.category;
+        const subcategories = categories.find(category => category.name === categoryName).subcategories;
+        const subcategoryElements = subcategories.map(subcategory => {
+            const subcategoryElement = document.createElement("div");
+            subcategoryElement.classList.add("subcategory", "hidden");
+
+            subcategoryElement.textContent = subcategory;
+            subcategoryElement.addEventListener("click", () => {
+                console.log(`Selected ${subcategory} in ${categoryName}`);
+            });
+            return subcategoryElement;
+        });
+        category.append(...subcategoryElements);
+
+        // Add event listener to show/hide subcategories
+        category.addEventListener("click", () => {
+            subcategoryElements.forEach(subcategory => {
+                subcategory.classList.toggle("hidden");
+            });
+        });
+    });
+
+    // Add search functionality
+    searchBox.addEventListener("input", () => {
+        const searchTerm = searchBox.value.toLowerCase();
+        categoryElements.forEach(category => {
+            const categoryName = category.dataset.category.toLowerCase();
+            if (categoryName.includes(searchTerm)) {
+                category.style.display = "block";
+            } else {
+                category.style.display = "none";
+            }
+        });
+    });
+    </script>
 </body>
+
 </html>
