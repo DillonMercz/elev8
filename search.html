@@ -270,11 +270,15 @@ form {
     </div>
     <div class="website-content-pussy-ass ho">
         <center>
-            <h1>Start Your Next Project<br><br></h1>
+            <h1>Start Your Next Project<br></h1>
             <div class="search-container">
                 <input type="text" placeholder="Search Services..." class="search-box">
                 <br>
-                <p style="color:blue;display: inline-block;margin-top:10px">Finding Services Near:<p id="zipCode" style="color:blue;display: inline-block;"> </p></p>
+                <p id="enable" style="color:blue; margin-top:10px; text-decoration: underline;cursor:pointer;" onclick = "openModal()">Enable Location to Find Services Near You</p>
+                <div id="location" style="display: none;">
+                    <p style="color:blue;display: inline-block;margin-top:10px">Finding Services Near:<p onclick = "openModal()" id="zipCode" style="color:blue;display: inline-block;text-decoration: underline;cursor: pointer;"> </p>
+                    </p>
+                </div>
             </div>
         </center>
         <center>
@@ -907,9 +911,10 @@ form {
             console.error('Geolocation is not supported by this browser');
         }
     }
-    function enterZip(){
-       var zip = document.getElementById("enterZip").value
-       handleZip(zip)
+
+    function enterZip() {
+        var zip = document.getElementById("enterZip").value
+        handleZip(zip)
     }
     // Get the modal
     const modal = document.getElementById("zipModal");
@@ -929,12 +934,18 @@ form {
     try {
         var zip = localStorage.getItem("zip")
         if (zip) {
-            document.getElementById('zipCode').innerHTML = zip
+            document.getElementById('zipCode').innerHTML = `  ${zip}`
+            document.getElementById("enable").style.display = "none"
+            document.getElementById("location").style.display = "block"
         } else {
             openModal()
+                    document.getElementById("enable").style.display = "block"
+        document.getElementById("location").style.display = "none"
         }
     } catch (error) {
         openModal()
+                document.getElementById("enable").style.display = "block"
+        document.getElementById("location").style.display = "none"
     }
 
     // When the user clicks on <span> (x), close the modal
@@ -948,9 +959,12 @@ form {
             closeModal();
         }
     }
-    function handleZip(zip){
+
+    function handleZip(zip) {
         localStorage.setItem("zip", zip);
-        document.getElementById("zipCode").innerHTML = " " + zip
+        document.getElementById("zipCode").innerHTML = ` ${zip}`
+        document.getElementById("enable").style.display = "none"
+        document.getElementById("location").style.display = "block"
         closeModal()
     }
     </script>
