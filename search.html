@@ -4,12 +4,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Elev8 - Services</title>
+    <!-- Primary Meta Tags -->
+    <title>Elev8 Home Services - Book Now</title>
+    <meta name="title" content="Elev8 Home Services - Book Now">
+    <meta name="description" content="Book Home Services With A Tap.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Elev8 Home Services - Book Now">
+    <meta property="og:description" content="Book Home Services With A Tap.">
+    <meta property="og:image" content="https://i.imgur.com/AuINjvO.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Elev8 Home Services - Book Now">
+    <meta property="twitter:description" content="Book Home Services With A Tap.">
+    <meta property="twitter:image" content="https://i.imgur.com/AuINjvO.png">
     <meta name="description" content="Elev8 - Services ">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
 </head>
 
 <body>
@@ -20,80 +36,99 @@
                     <span class="glyphicon glyphicon-menu-hamburger"></span>
                 </button>
                 <div class="navbar-left logo">
-                    <img src="https://i.imgur.com/DVbdCW5.png" heigth="75px" width="75px">
+                    <img src="https://i.imgur.com/DVbdCW5.png" heigth="90px" width="140px">
                 </div>
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Menu</a></li>
-                    <li><a href="#contact">Reserve</a></li>
+                    <li><a class="white" href="#intro">Home</a></li>
+                    <li><a class="white" href="#about">About</a></li>
+                    <li><a class="white" href="#portfolio">Menu</a></li>
+                    <li><a class="white" href="#contact">Reserve</a></li>
                 </ul>
+                <button type="button" class="button" style="
+                    padding: 10px;
+                    margin-top: 12px;
+                    background: #C78B05;
+                    color: white;
+                    border-radius: 10px;
+                ">
+                    Book Now
+                </button>
             </div>
         </div>
     </nav>
     <style>
+        .navbar-toggle{
+            background-color: white;
+        }
+        .navbar-fixed-top{
+background-color: black;
+}
+.white{
+    margin-top: 10px;
+    color: white !important;
+}
         .ho{
-    		margin-top:100px;
-    	}
-		.container1 {
-			margin: 20px;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			width:40%;
-		}
-		.category {
-			margin: 10px;
-			padding: 10px;
-			margin-bottom:20px;
-			background-color: #f2f2f2;
-			text-align: center;
-			cursor: pointer;
-			transition: all 0.2s ease-in-out;
-			min-width: 183px;
-			max-width: 183px;
-		}
-		.category:hover {
-			transform: scale(1.05);
-			min-width: 183px;
-			max-width: 183px;
-		}
-		.subcategory {
-			margin: 10px;
-			padding: 15px;
-			background-color: #ddd;
-			border-radius: 3px;
-			box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-			text-align: center;
-			cursor: pointer;
-			transition: all 0.2s ease-in-out;
-		}
-		.subcategory:hover {
-			transform: scale(1.05);
-			box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-		}
-		.search-container {
-			margin-bottom: 20px;
-			text-align: center;
-		}
-		.search-box {
-			padding: 10px;
-			border-radius: 5px;
-			border-color:lightgray ;
-			width: 300px;
-			max-width: 100%;
-			font-size: 16px;
-		}
-		.hidden{
-			display: none;
-		}
-		body{
-			font-family: "Arial" !important;
-		}
-	</style>
+            margin-top:150px;
+        }
+        .container1 {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width:40%;
+        }
+        .category {
+            margin: 10px;
+            padding: 10px;
+            margin-bottom:20px;
+            background-color: #f2f2f2;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            min-width: 250px;
+            max-width: 250px;
+        }
+        .category:hover {
+            transform: scale(1.05);
+            min-width: 250px;
+            max-width: 250px;
+        }
+        .subcategory {
+            margin: 10px;
+            padding: 15px;
+            background-color: #ddd;
+            border-radius: 3px;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .subcategory:hover {
+            transform: scale(1.05);
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        .search-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-box {
+            padding: 10px;
+            border-radius: 5px;
+            border-color:black ;
+            width: 300px;
+            max-width: 100%;
+            font-size: 16px;
+        }
+        .hidden{
+            display: none;
+        }
+        body{
+            font-family: "Arial" !important;
+        }
+    </style>
     <div class="website-content-pussy-ass ho">
         <div class="search-container">
             <input type="text" placeholder="Search Services..." class="search-box">
@@ -127,11 +162,50 @@
                 <div class="category" data-category="Pest Control">
                     <h3>Pest Control</h3>
                 </div>
-                                <div class="category" data-category="Handyman">
+                <div class="category" data-category="Handyman">
                     <h3>Handyman</h3>
                 </div>
-                                <div class="category" data-category="Cleaning">
+                <div class="category" data-category="Cleaning">
                     <h3>Cleaning</h3>
+                </div>
+                <div class="category" data-category="Painting">
+                    <h3>Painting</h3>
+                </div>
+                <div class="category" data-category="Smart Home">
+                    <h3>Smart Home</h3>
+                </div>
+                <div class="category" data-category="Home Security">
+                    <h3>Home Security</h3>
+                </div>
+                <div class="category" data-category="Paving">
+                    <h3>Paving</h3>
+                </div>
+                <div class="category" data-category="Appliances">
+                    <h3>Appliances</h3>
+                </div>
+                <div class="category" data-category="Moving Services">
+                    <h3>Moving Services</h3>
+                </div>
+                <div class="category" data-category="Furniture Assembly">
+                    <h3>Furniture Assembly</h3>
+                </div>
+                <div class="category" data-category="TV and Stereo">
+                    <h3>TV and Stereo</h3>
+                </div>
+                <div class="category" data-category="Interior Design">
+                    <h3>Interior Design</h3>
+                </div>
+                <div class="category" data-category="Garage">
+                    <h3>Garage</h3>
+                </div>
+                <div class="category" data-category="Bathroom">
+                    <h3>Bathroom</h3>
+                </div>
+                <div class="category" data-category="Kitchen">
+                    <h3>Kitchen</h3>
+                </div>
+                <div class="category" data-category="Living Room">
+                    <h3>Living Room</h3>
                 </div>
             </div>
         </center>
@@ -150,6 +224,95 @@
                 "Boat Dock"
             ]
         },
+        {
+            "name": "Door Services",
+            "subcategories": [
+                "Door Installation",
+                "Door Repair",
+                "Sliding Door Repair",
+                "Sliding Door Installation",
+                "Shower Door Repair",
+                "Shower Door Installation",
+                "Storm Door Installation",
+                "Storm Door Repair",
+                "Screen Door Installation",
+                "Screen Door Repair",
+                "Security Door Installation",
+                "Security Door Repair",
+                "French Door Installation",
+                "French Door Repair"
+            ]
+        }, {
+            "name": "Living Room",
+            "subcategories": [
+                "Sofa, Couch, and Upholstery Cleaning",
+                "Carpet Cleaning",
+                "Blinds and Shades Installation",
+                "TV Mounting",
+                "Art and Picture Hanging",
+                "Lighting Installation",
+                "Furniture Moving and Rearranging",
+                "Curtain and Drapes Installation"
+            ]
+        }, {
+            "name": "Garage",
+            "subcategories": [
+                "Garage Door Installation",
+                "Garage Door Repair",
+                "Garage Organization and Shelving",
+                "Garage Flooring",
+                "Garage Lighting",
+                "Garage Heating and Cooling",
+                "Garage Conversion",
+                "Car Lift Installation",
+                "Vehicle Maintenance",
+                "General Garage Repairs"
+            ]
+        },
+        {
+            "name": "TV and Stereo",
+            "subcategories": [
+                "TV Installation",
+                "TV Mounting",
+                "Home Theater Setup",
+                "Stereo and Surround Sound Installation",
+                "Speaker Installation",
+                "Cable and Wire Management",
+                "Remote Control Programming",
+                "TV Repair",
+                "Stereo and Sound System Repair"
+            ]
+        },
+        {
+            "name": "Kitchen",
+            "subcategories": [
+                "Cabinet Installation and Repair",
+                "Countertop Installation and Repair",
+                "Sink and Faucet Installation and Repair",
+                "Flooring Installation and Repair",
+                "Lighting Installation and Repair",
+                "Appliance Installation and Repair",
+                "Backsplash Installation and Repair",
+                "Kitchen Island Installation",
+                "Pantry Organization and Installation"
+            ]
+        },
+        {
+            "name": "Interior Design",
+            "subcategories": [
+                "Residential Design",
+                "Commercial Design",
+                "Color Consulting",
+                "Furniture Selection and Placement",
+                "Lighting Design",
+                "Window Treatments and Coverings",
+                "Wallpaper and Paint Selection",
+                "Flooring Selection",
+                "Accessories and Decor",
+                "Space Planning"
+            ]
+        },
+
 
         {
             "name": "Flooring",
@@ -215,9 +378,12 @@
                 "Move-In/Move-Out Cleaning",
                 "Commercial Cleaning",
                 "Disinfecting and Sanitizing",
-                "Maid Services"
+                "Maid Services",
+                "Window Cleaning",
+                "Airbnb Cleaning"
             ]
         },
+
         {
             "name": "Roofing",
             "subcategories": [
@@ -309,7 +475,133 @@
                 "Pool Equipment Repair and Replacement",
                 "Pool Lighting Installation and Repair"
             ]
+        },
+        {
+            "name": "Painting",
+            "subcategories": [
+                "Interior Painting",
+                "Exterior Painting",
+                "Commercial Painting",
+                "Residential Painting",
+                "Wallpaper Installation and Removal",
+                "Color Consultation",
+                "Faux Painting",
+                "Cabinet Painting",
+                "Deck and Fence Painting or Staining",
+                "Pressure Washing",
+                "Drywall Repair and Texturing",
+                "Trim and Baseboard Painting",
+                "Epoxy Floor Coating"
+            ]
+        },
+        {
+            "name": "Smart Home",
+            "subcategories": [
+                "Smart Home Installation",
+                "Smart Thermostat Installation and Programming",
+                "Smart Lighting Installation and Programming",
+                "Smart Lock Installation and Programming",
+                "Smart Speaker and Voice Assistant Setup",
+                "Smart Appliance Installation and Programming",
+                "Smart Home Consulting and Design",
+                "Smart Home Troubleshooting and Repair"
+            ]
+        },
+        {
+            "name": "Home Security",
+            "subcategories": [
+                "Alarm System Installation",
+                "Surveillance Camera Installation",
+                "Smart Home Security System Installation",
+                "Window and Door Security",
+                "Motion Detector Installation",
+                "Security Lighting Installation",
+                "Access Control System Installation",
+                "Security System Monitoring",
+                "Security System Repair and Maintenance",
+                "Security Consultation and Design"
+            ]
+        },
+        {
+            "name": "Paving",
+            "subcategories": [
+                "Driveway Paving",
+                "Asphalt Paving",
+                "Concrete Paving",
+                "Patio Paving",
+                "Walkway Paving",
+                "Pool Deck Paving",
+                "Brick Paving",
+                "Stone Paving",
+                "Interlocking Pavers",
+                "Paver Repair and Maintenance",
+                "Paver Sealing",
+                "Paver Cleaning"
+            ]
+        }, {
+            "name": "Furniture Assembly",
+            "subcategories": [
+                "Office Furniture Assembly",
+                "Home Furniture Assembly",
+                "IKEA Furniture Assembly",
+                "Bed Assembly",
+                "Dresser Assembly",
+                "Wardrobe Assembly",
+                "Table and Chair Assembly",
+                "Bookshelf Assembly",
+                "TV Stand Assembly",
+                "Cabinet Assembly"
+            ]
+        },
+        {
+            "name": "Moving Services",
+            "subcategories": [
+                "Local Moving",
+                "Long Distance Moving",
+                "Commercial Moving",
+                "Residential Moving",
+                "Packing and Unpacking",
+                "Storage Solutions",
+                "Senior Moving Services",
+                "Furniture Moving",
+                "Piano Moving",
+                "Small Moves"
+            ]
+        },
+        {
+            "name": "Appliances",
+            "subcategories": [
+                "Refrigerator Repair",
+                "Dishwasher Repair",
+                "Oven and Stove Repair",
+                "Washing Machine Repair",
+                "Dryer Repair",
+                "Microwave Repair",
+                "Freezer Repair",
+                "Garbage Disposal Repair",
+                "Trash Compactor Repair",
+                "Range Hood Repair"
+            ]
+        },
+        {
+            "name": "Bathroom",
+            "subcategories": [
+                "Bathroom Remodeling",
+                "Shower and Bathtub Installation",
+                "Toilet Repair and Installation",
+                "Sink and Faucet Installation",
+                "Tile Installation and Repair",
+                "Grout and Caulking Services",
+                "Plumbing Services",
+                "Exhaust Fan Installation",
+                "Bathroom Lighting Installation",
+                "Bathroom Vanity Installation",
+                "Mirror Installation",
+                "Towel Rack and Hook Installation",
+                "Handicap Accessible Bathroom Installation"
+            ]
         }
+
     ]
     const categoryElements = document.querySelectorAll(".category");
     const searchBox = document.querySelector(".search-box");
@@ -343,7 +635,14 @@
         const searchTerm = searchBox.value.toLowerCase();
         categoryElements.forEach(category => {
             const categoryName = category.dataset.category.toLowerCase();
-            if (categoryName.includes(searchTerm)) {
+            let foundSubcategory = false;
+            category.querySelectorAll(".subcategory").forEach(subcategory => {
+                const subcategoryName = subcategory.textContent.toLowerCase();
+                if (subcategoryName.includes(searchTerm)) {
+                    foundSubcategory = true;
+                }
+            });
+            if (categoryName.includes(searchTerm) || foundSubcategory) {
                 category.style.display = "block";
             } else {
                 category.style.display = "none";
