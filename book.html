@@ -30,7 +30,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Book Home Services</title>
         <style>
-        	body{
+            body{
         		background-color: #F3EFEF
         	}
             .website-content-pussy-ass {
@@ -246,29 +246,22 @@ background-color: black;
             <button type="button" id="part-1-next">Continue</button>
         </form>
         <form id="form-part-2" class="job-info" style="display: none;">
-        	<center>
+            <center>
                 <h1>
                     Booking Form:
                 </h1>
             </center><br>
-            <label for="job">Job Type:</label>
-            <select id="job" name="job" required>
-                <option value="" disabled selected>Select a job type</option>
-                <option value="plumbing">Plumbing</option>
-                <option value="electrical">Electrical</option>
-                <option value="cleaning">Cleaning</option>
-                <option value="handyman">Handyman</option>
-                <option value="landscaping">Landscaping</option>
-            </select>
-            <label for="details">Job Details:</label>
-            <textarea id="details" name="details" placeholder="Please describe your job details" required></textarea>
+            <label for="job">Booking Category:</label>
+            <h3 id="category"></h3>
+            <label for="details">Booking Subcategory:</label>
+            <h3 id="subcategory"></h3>
             <label for="quote">Estimated Quote:</label>
             <input type="text" id="quote" name="quote" placeholder="Quote will be calculated based on job details" readonly>
             <button type="button" id="part-2-back">Back</button>
             <button type="button" id="part-2-next">Continue</button>
         </form>
         <form id="form-part-3" class="job-details" style="display: none;" action="https://example.com/submit" method="post">
-        	<center>
+            <center>
                 <h1>
                     Booking Form:
                 </h1>
@@ -350,6 +343,17 @@ background-color: black;
     }
     var zip = localStorage.getItem("zip")
     document.getElementById('zip').value = zip
+    // Create a new URL object with the current URL
+    const url = new URL(window.location.href);
+
+    // Get the query parameters
+    const params = new URLSearchParams(url.search);
+
+    // Get the value of a specific parameter
+    const category = params.get("category");
+    document.getElementById("category").innerHTML = category
+    const subcategory = params.get("subcategory");
+    document.getElementById("subcategory").innerHTML = subcategory
     </script>
 </body>
 
