@@ -333,9 +333,7 @@ background-color: black;
     // Quote calculator
     const detailsInput = document.querySelector('#details');
     const quoteInput = document.querySelector('#quote');
-    detailsInput.addEventListener('input', () => {
-        quoteInput.value = calculateQuote(detailsInput.value);
-    });
+
 
     function calculateQuote(details) {
         // Simple quote calculation
