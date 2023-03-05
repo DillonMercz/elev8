@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -24,100 +25,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Book Home Services</title>
-        <style>
-        	body{
-        		background-color: #F3EFEF
-        	}
-            .website-content-pussy-ass {
-			background-color: #F3EFEF;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 100vh;
-		}
-
-		form {
-			background-color: #FFFFFF;
-			border-radius: 10px;
-			padding: 30px;
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-			display: flex;
-			text-align: left;
-			flex-direction: column;
-			align-items: left;
-			gap: 20px;
-			max-width: 500px;
-			width: 100%;
-			margin-top: 30%;
-		}
-
-		form label {
-			font-size: 18px;
-			font-weight: 500;
-			display: block;
-			margin-bottom: 10px;
-			color: #333333;
-		}
-
-		form input,
-		form select,
-		form textarea {
-			border-radius: 5px;
-			border: none;
-			padding: 10px;
-			font-size: 16px;
-			width: 100%;
-			background-color: #F3EFEF;
-			color: #333333;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-			resize: none;
-			font-family: 'Poppins', sans-serif;
-		}
-
-		form input[type="submit"] {
-			background-color: #42A5F5;
-			color: #FFFFFF;
-			font-size: 18px;
-			font-weight: 500;
-			cursor: pointer;
-			transition: background-color 0.2s ease;
-			width: auto;
-			padding: 10px 30px;
-			border-radius: 50px;
-			text-transform: uppercase;
-		}
-
-		form input[type="submit"]:hover {
-			background-color: #2196F3;
-		}
-
-		form button[type="button"] {
-			background-color: #42A5F5;
-			color: #FFFFFF;
-			font-size: 18px;
-			font-weight: 500;
-			cursor: pointer;
-			transition: background-color 0.2s ease;
-			width: auto;
-			padding: 10px 30px;
-			border-radius: 50px;
-			text-transform: uppercase;
-			border: none;
-		}
-
-		form button[type="button"]:hover {
-			background-color: #2196F3;
-		}
-		label{
-			align-self: baseline ;
-		}
-
-		        @media (max-width: 757px) {
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <div class="navbar-left logo">
+                    <img src="https://i.imgur.com/DVbdCW5.png" heigth="90px" width="140px">
+                </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a class="white" href="#intro">Home</a></li>
+                    <li><a class="white" href="#about">About</a></li>
+                    <li><a class="white" href="#portfolio">Menu</a></li>
+                    <li><a class="white" href="#contact">Reserve</a></li>
+                </ul>
+                <button type="button" class="button" style="
+                    padding: 10px;
+                    margin-top: 12px;
+                    background: #C78B05;
+                    color: white;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                ">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </nav>
+    <center>
+        <img src="https://i.imgur.com/SpVOgZq.png" class="banner" height="20%" style="width:40%;margin-top:100px;height: 80%;">
+    </center>
+    <style>
+        @media (max-width: 757px) {
   .banner {
     width: 100% !important;
     height: auto;
@@ -192,164 +137,872 @@ background-color: black;
         body{
             font-family: "Arial" !important;
         }
-	</style>
-    </head>
 
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
-                </button>
-                <div class="navbar-left logo">
-                    <img src="https://i.imgur.com/DVbdCW5.png" heigth="90px" width="140px">
+        /* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button */
+.close-button {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form styles */
+form {
+  margin-top: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 30%; /* Change the width to 30% */
+  padding: 10px;
+  font-size: 16px;
+  border-color: black;
+  border-radius: 4px;
+  outline: none;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-enter {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-enter:hover {
+  background-color: #3e8e41;
+}
+
+.btn-find {
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-find:hover {
+  background-color: #0b7dda;
+}
+
+.or-element {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.or-line {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  border: none;
+  margin: 0;
+}
+
+.or-text {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    margin: 25% auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .form-control {
+    width: 70%;
+  }
+  
+  .btn-enter, .btn-find {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .or-element {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+  
+  .or-line {
+    width: 50%;
+    margin: 5px 0;
+  }
+  
+  .or-text {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+}
+
+
+    </style>
+    <div class="modal" id="zipModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <center>
+                <h2>Zip Code</h2>
+                <h3>Please provide your zip code to find expert services near you.</h3>
+                <div>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="enterZip" maxlength="5" placeholder="Enter Zip..." style="width:30%">
+                        <button class="btn-enter" onclick="enterZip()">Enter</button>
+                    </div>
+                    <div class="or-element">
+                        <hr class="or-line">
+                        <span class="or-text">OR</span>
+                        <hr class="or-line">
+                    </div>
+                    <button class="btn-find" onclick="getZip()">Find it for me</button>
+                </div>
+            </center>
+        </div>
+    </div>
+    <div class="website-content-pussy-ass ho">
+        <center>
+            <h1>Start Your Next Project<br></h1>
+            <div class="search-container">
+                <input type="text" placeholder="Search Services..." class="search-box">
+                <br>
+                <p id="enable" style="color:blue; margin-top:10px; text-decoration: underline;cursor:pointer;" onclick = "openModal()">Enable Location to Find Services Near You</p>
+                <div id="location" style="display: none;">
+                    <p style="color:blue;display: inline-block;margin-top:10px">Finding Services Near:<p onclick = "openModal()" id="zipCode" style="color:blue;display: inline-block;text-decoration: underline;cursor: pointer;"> </p>
+                    </p>
                 </div>
             </div>
-            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a class="white" href="#intro">Home</a></li>
-                    <li><a class="white" href="#about">About</a></li>
-                    <li><a class="white" href="#portfolio">Menu</a></li>
-                    <li><a class="white" href="#contact">Reserve</a></li>
-                </ul>
-                <button type="button" class="button" style="
-                    padding: 10px;
-                    margin-top: 12px;
-                    background: #C78B05;
-                    color: white;
-                    border-radius: 10px;
-                    margin-bottom: 10px;
-                ">
-                    Book Now
-                </button>
+        </center>
+        <center>
+            <div class="container1">
+                <center>
+                <div class="category" data-category="Pressure Washing">
+                    <h3>Pressure Washing</h3>
+                </div>
+                <div class="category" data-category="Flooring">
+                    <h3>Flooring</h3>
+                </div>
+                <div class="category" data-category="Landscaping">
+                    <h3>Landscaping</h3>
+                </div>
+                <div class="category" data-category="Roofing">
+                    <h3>Roofing</h3>
+                </div>
+                <div class="category" data-category="Air Conditioning">
+                    <h3>Air Conditioning</h3>
+                </div>
+                <div class="category" data-category="Plumbing">
+                    <h3>Plumbing</h3>
+                </div>
+                <div class="category" data-category="Electrical">
+                    <h3>Electrical</h3>
+                </div>
+                <div class="category" data-category="Pool Services">
+                    <h3>Pool Services</h3>
+                </div>
+                <div class="category" data-category="Pest Control">
+                    <h3>Pest Control</h3>
+                </div>
+                <div class="category" data-category="Handyman">
+                    <h3>Handyman</h3>
+                </div>
+                <div class="category" data-category="Cleaning">
+                    <h3>Cleaning</h3>
+                </div>
+                <div class="category" data-category="Painting">
+                    <h3>Painting</h3>
+                </div>
+                <div class="category" data-category="Smart Home">
+                    <h3>Smart Home</h3>
+                </div>
+                <div class="category" data-category="Home Security">
+                    <h3>Home Security</h3>
+                </div>
+                <div class="category" data-category="Paving">
+                    <h3>Paving</h3>
+                </div>
+                <div class="category" data-category="Appliances">
+                    <h3>Appliances</h3>
+                </div>
+                <div class="category" data-category="Moving Services">
+                    <h3>Moving Services</h3>
+                </div>
+                <div class="category" data-category="Furniture Assembly">
+                    <h3>Furniture Assembly</h3>
+                </div>
+                <div class="category" data-category="TV and Stereo">
+                    <h3>TV and Stereo</h3>
+                </div>
+                <div class="category" data-category="Interior Design">
+                    <h3>Interior Design</h3>
+                </div>
+                <div class="category" data-category="Garage">
+                    <h3>Garage</h3>
+                </div>
+                <div class="category" data-category="Bathroom">
+                    <h3>Bathroom</h3>
+                </div>
+                <div class="category" data-category="Kitchen">
+                    <h3>Kitchen</h3>
+                </div>
+                <div class="category" data-category="Living Room">
+                    <h3>Living Room</h3>
+                </div>
+                <div class="category" data-category="Irrigation">
+                    <h3>Irrigation</h3>
+                </div>
+                <div class="category" data-category="Solar">
+                    <h3>Solar</h3>
+                </div>
+                <div class="category" data-category="Lighting">
+                    <h3>Lighting</h3>
+                </div>
+                <div class="category" data-category="Fencing">
+                    <h3>Fencing</h3>
+                </div>
+            </center>
             </div>
-        </div>
-    </nav>
-    <div class="website-content-pussy-ass ho">
-        <form id="form-part-1" class="contact-info">
-            <center>
-                <h1>
-                    Booking Form:
-                </h1>
-            </center><br>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your email" required>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" placeholder="Your address" required></textarea>
-            <label for="zip">Zip Code:</label>
-            <input type="text" id="zip" name="zip" readonly>
-            <button type="button" id="part-1-next">Continue</button>
-        </form>
-        <form id="form-part-2" class="job-info" style="display: none;">
-        	<center>
-                <h1>
-                    Booking Form:
-                </h1>
-            </center><br>
-            <label for="job">Job Type:</label>
-            <select id="job" name="job" required>
-                <option value="" disabled selected>Select a job type</option>
-                <option value="plumbing">Plumbing</option>
-                <option value="electrical">Electrical</option>
-                <option value="cleaning">Cleaning</option>
-                <option value="handyman">Handyman</option>
-                <option value="landscaping">Landscaping</option>
-            </select>
-            <label for="details">Job Details:</label>
-            <textarea id="details" name="details" placeholder="Please describe your job details" required></textarea>
-            <label for="quote">Estimated Quote:</label>
-            <input type="text" id="quote" name="quote" placeholder="Quote will be calculated based on job details" readonly>
-            <button type="button" id="part-2-back">Back</button>
-            <button type="button" id="part-2-next">Continue</button>
-        </form>
-        <form id="form-part-3" class="job-details" style="display: none;" action="https://example.com/submit" method="post">
-        	<center>
-                <h1>
-                    Booking Form:
-                </h1>
-            </center><br>
-            <label for="date">Preferred Date:</label>
-            <input type="date" id="date" name="date" required>
-            <label for="time">Preferred Time:</label>
-            <input type="time" id="time" name="time" required>
-            <label for="notes">Additional Notes:</label>
-            <textarea id="notes" name="notes" placeholder="Please enter any additional notes"></textarea>
-            <input type="hidden" id="job-type" name="job-type">
-            <input type="hidden" id="job-details" name="job-details">
-            <input type="hidden" id="estimated-quote" name="estimated-quote">
-            <input type="submit" value="Submit">
-            <button type="button" id="part-3-back">Back</button>
-        </form>
+        </center>
     </div>
     <script>
-    // DOM elements
-    const part1 = document.querySelector('#form-part-1');
-    const part2 = document.querySelector('#form-part-2');
-    const part3 = document.querySelector('#form-part-3');
+    const categories = [{
+            "name": "Pressure Washing",
+            "subcategories": [
+                "Driveway",
+                "Patio",
+                "Pool Deck",
+                "Sidewalk",
+                "Fence",
+                "House Exterior",
+                "Roof",
+                "Boat Dock"
+            ]
+        },
+        {
+            "name": "Fencing",
+            "subcategories": [
+                "Wooden Fence Installation",
+                "Wooden Fence Repair",
+                "Vinyl Fence Installation",
+                "Vinyl Fence Repair",
+                "Chain Link Fence Installation",
+                "Chain Link Fence Repair",
+                "Wrought Iron Fence Installation",
+                "Wrought Iron Fence Repair",
+                "Aluminum Fence Installation",
+                "Aluminum Fence Repair",
+                "Farm and Ranch Fence Installation",
+                "Farm and Ranch Fence Repair",
+                "Pool Fence Installation",
+                "Pool Fence Repair",
+                "Fence Staining and Painting",
+                "Fence Power Washing"
+            ]
+        },
+        {
+            "name": "Solar",
+            "subcategories": [
+                "Solar Panel Installation",
+                "Solar Panel Repair",
+                "Solar Inverter Installation",
+                "Solar Inverter Repair",
+                "Solar Battery Installation",
+                "Solar Battery Repair",
+                "Off-Grid Solar System Installation",
+                "Off-Grid Solar System Repair",
+                "Grid-Tied Solar System Installation",
+                "Grid-Tied Solar System Repair",
+                "Solar Pool Heater Installation",
+                "Solar Pool Heater Repair",
+                "Solar Water Heater Installation",
+                "Solar Water Heater Repair"
+            ]
+        },
+        {
+            "name": "Irrigation",
+            "subcategories": [
+                "Irrigation System Installation",
+                "Irrigation System Repair",
+                "Sprinkler System Installation",
+                "Sprinkler System Repair",
+                "Drip Irrigation Installation",
+                "Drip Irrigation Repair",
+                "Lawn Sprinkler System Installation",
+                "Lawn Sprinkler System Repair",
+                "Backflow Preventer Installation",
+                "Backflow Preventer Testing",
+                "Winterization",
+                "Spring Start-Up",
+                "Rain Sensor Installation"
+            ]
+        },
+        {
+            "name": "Door Services",
+            "subcategories": [
+                "Door Installation",
+                "Door Repair",
+                "Sliding Door Repair",
+                "Sliding Door Installation",
+                "Shower Door Repair",
+                "Shower Door Installation",
+                "Storm Door Installation",
+                "Storm Door Repair",
+                "Screen Door Installation",
+                "Screen Door Repair",
+                "Security Door Installation",
+                "Security Door Repair",
+                "French Door Installation",
+                "French Door Repair"
+            ]
+        }, {
+            "name": "Living Room",
+            "subcategories": [
+                "Sofa, Couch, and Upholstery Cleaning",
+                "Carpet Cleaning",
+                "Blinds and Shades Installation",
+                "TV Mounting",
+                "Art and Picture Hanging",
+                "Lighting Installation",
+                "Furniture Moving and Rearranging",
+                "Curtain and Drapes Installation"
+            ]
+        }, {
+            "name": "Garage",
+            "subcategories": [
+                "Garage Door Installation",
+                "Garage Door Repair",
+                "Garage Organization and Shelving",
+                "Garage Flooring",
+                "Garage Lighting",
+                "Garage Heating and Cooling",
+                "Garage Conversion",
+                "Car Lift Installation",
+                "Vehicle Maintenance",
+                "General Garage Repairs"
+            ]
+        },
+        {
+            "name": "TV and Stereo",
+            "subcategories": [
+                "TV Installation",
+                "TV Mounting",
+                "Home Theater Setup",
+                "Stereo and Surround Sound Installation",
+                "Speaker Installation",
+                "Cable and Wire Management",
+                "Remote Control Programming",
+                "TV Repair",
+                "Stereo and Sound System Repair"
+            ]
+        },
+        {
+            "name": "Kitchen",
+            "subcategories": [
+                "Cabinet Installation and Repair",
+                "Countertop Installation and Repair",
+                "Sink and Faucet Installation and Repair",
+                "Flooring Installation and Repair",
+                "Lighting Installation and Repair",
+                "Appliance Installation and Repair",
+                "Backsplash Installation and Repair",
+                "Kitchen Island Installation",
+                "Pantry Organization and Installation"
+            ]
+        },
+        {
+            "name": "Interior Design",
+            "subcategories": [
+                "Residential Design",
+                "Commercial Design",
+                "Color Consulting",
+                "Furniture Selection and Placement",
+                "Lighting Design",
+                "Window Treatments and Coverings",
+                "Wallpaper and Paint Selection",
+                "Flooring Selection",
+                "Accessories and Decor",
+                "Space Planning"
+            ]
+        },
 
-    // Part 1
-    const part1NextBtn = document.querySelector('#part-1-next');
-    part1NextBtn.addEventListener('click', () => {
-        part1.style.display = 'none';
-        part2.style.display = 'flex';
-        part2.style.flexDirection = 'column';
-        part2.style.alignItems = 'center';
-        part2.style.gap = '20px';
+
+        {
+            "name": "Flooring",
+            "subcategories": [
+                "Vinyl",
+                "Tile",
+                "Epoxy",
+                "Laminate",
+                "Hardwood",
+                "Carpet",
+                "Terrazzo"
+            ]
+        },
+        {
+            "name": "Landscaping",
+            "subcategories": [
+                "Lawn care",
+                "Garden design",
+                "Hardscaping",
+                "Tree care",
+                "Irrigation",
+                "Landscape maintenance",
+                "Landscaping installation",
+                "Outdoor living spaces",
+                "Water features",
+                "Landscape lighting",
+                "Pool Landscaping",
+                "Xeriscaping",
+                "Artificial Turf",
+                "Sod Installation",
+                "Mulching",
+                "Planting",
+                "Tree Trimming",
+                "Stump Grinding",
+                "Weed Control",
+                "Pest Control",
+                "Fertilization",
+                "Seasonal Cleanups"
+            ]
+        },
+        {
+            "name": "Handyman",
+            "subcategories": [
+                "Painting and Staining",
+                "Drywall Repair and Installation",
+                "Furniture Assembly",
+                "General Home Repairs",
+                "Window Repair and Installation",
+                "Door Repair and Installation",
+                "Caulking and Weatherstripping",
+                "Tile and Grout Installation and Repair",
+            ]
+        },
+        {
+            "name": "Lighting",
+            "subcategories": [
+                "Light Fixture Installation",
+                "Light Fixture Repair",
+                "LED Lighting Installation",
+                "LED Lighting Repair",
+                "Outdoor Lighting Installation",
+                "Outdoor Lighting Repair",
+                "Landscape Lighting Installation",
+                "Landscape Lighting Repair",
+                "Chandelier Installation",
+                "Chandelier Repair",
+                "Ceiling Fan Installation",
+                "Ceiling Fan Repair",
+                "Dimmer Switch Installation",
+                "Dimmer Switch Repair",
+                "Lighting Control System Installation",
+                "Lighting Control System Repair"
+            ]
+        },
+        {
+            "name": "Cleaning",
+            "subcategories": [
+                "House Cleaning",
+                "Carpet Cleaning",
+                "Upholstery Cleaning",
+                "Window Cleaning",
+                "Deep Cleaning",
+                "Move-In/Move-Out Cleaning",
+                "Commercial Cleaning",
+                "Disinfecting and Sanitizing",
+                "Maid Services",
+                "Window Cleaning",
+                "Airbnb Cleaning"
+            ]
+        },
+
+        {
+            "name": "Roofing",
+            "subcategories": [
+                "Roof repair",
+                "Roof replacement",
+                "Roof installation",
+                "Gutter installation and repair",
+                "Skylight installation and repair",
+                "Roof cleaning and maintenance",
+                "Chimney repair and maintenance",
+                "Emergency roof repair",
+                "Flat Roofing",
+                "Metal Roofing",
+                "Tile Roofing",
+                "Shingle Roofing"
+            ]
+        },
+        {
+            "name": "Air Conditioning",
+            "subcategories": [
+                "AC Repair",
+                "AC Installation",
+                "AC Maintenance",
+                "Duct Cleaning",
+                "Thermostat Installation",
+                "Indoor Air Quality",
+                "Commercial AC Services",
+                "Emergency AC Services",
+                "Heat Pump Services"
+            ]
+        },
+        {
+            "name": "Plumbing",
+            "subcategories": [
+                "Water Heater Repair and Installation",
+                "Drain Cleaning",
+                "Toilet Repair and Installation",
+                "Faucet Repair and Installation",
+                "Garbage Disposal Repair and Installation",
+                "Sump Pump Repair and Installation",
+                "Leak Detection and Repair",
+                "Backflow Prevention",
+                "Hydro Jetting",
+                "Gas Line Services"
+            ]
+        },
+        {
+            "name": "Electrical",
+            "subcategories": [
+                "Electrical Repairs",
+                "Electrical Panel Upgrades",
+                "Electrical Installations",
+                "Lighting Installations and Repairs",
+                "Ceiling Fan Installations",
+                "Generators",
+                "Surge Protection",
+                "Electrical Inspections",
+                "Emergency Electrical Services"
+            ]
+        },
+        {
+            "name": "Pest Control",
+            "subcategories": [
+                "Termite Inspection and Treatment",
+                "Bed Bug Treatment",
+                "Ant Control",
+                "Rodent Control",
+                "Mosquito Control",
+                "Spider Control",
+                "Flea and Tick Treatment",
+                "Wildlife Control",
+                "Bee and Wasp Removal"
+            ]
+        },
+        {
+            "name": "Pool Services",
+            "subcategories": [
+                "Pool Cleaning",
+                "Pool Maintenance",
+                "Pool Repair",
+                "Pool Renovation",
+                "Pool Resurfacing",
+                "Pool Decking",
+                "Pool Heating",
+                "Saltwater Pool Services",
+                "Commercial Pool Services",
+                "Emergency Pool Services",
+                "Pool Leak Detection and Repair",
+                "Pool Equipment Repair and Replacement",
+                "Pool Lighting Installation and Repair"
+            ]
+        },
+        {
+            "name": "Painting",
+            "subcategories": [
+                "Interior Painting",
+                "Exterior Painting",
+                "Commercial Painting",
+                "Residential Painting",
+                "Wallpaper Installation and Removal",
+                "Color Consultation",
+                "Faux Painting",
+                "Cabinet Painting",
+                "Deck and Fence Painting or Staining",
+                "Pressure Washing",
+                "Drywall Repair and Texturing",
+                "Trim and Baseboard Painting",
+                "Epoxy Floor Coating"
+            ]
+        },
+        {
+            "name": "Smart Home",
+            "subcategories": [
+                "Smart Home Installation",
+                "Smart Thermostat Installation and Programming",
+                "Smart Lighting Installation and Programming",
+                "Smart Lock Installation and Programming",
+                "Smart Speaker and Voice Assistant Setup",
+                "Smart Appliance Installation and Programming",
+                "Smart Home Consulting and Design",
+                "Smart Home Troubleshooting and Repair"
+            ]
+        },
+        {
+            "name": "Home Security",
+            "subcategories": [
+                "Alarm System Installation",
+                "Surveillance Camera Installation",
+                "Smart Home Security System Installation",
+                "Window and Door Security",
+                "Motion Detector Installation",
+                "Security Lighting Installation",
+                "Access Control System Installation",
+                "Security System Monitoring",
+                "Security System Repair and Maintenance",
+                "Security Consultation and Design"
+            ]
+        },
+        {
+            "name": "Paving",
+            "subcategories": [
+                "Driveway Paving",
+                "Asphalt Paving",
+                "Concrete Paving",
+                "Patio Paving",
+                "Walkway Paving",
+                "Pool Deck Paving",
+                "Brick Paving",
+                "Stone Paving",
+                "Interlocking Pavers",
+                "Paver Repair and Maintenance",
+                "Paver Sealing",
+                "Paver Cleaning"
+            ]
+        }, {
+            "name": "Furniture Assembly",
+            "subcategories": [
+                "Office Furniture Assembly",
+                "Home Furniture Assembly",
+                "IKEA Furniture Assembly",
+                "Bed Assembly",
+                "Dresser Assembly",
+                "Wardrobe Assembly",
+                "Table and Chair Assembly",
+                "Bookshelf Assembly",
+                "TV Stand Assembly",
+                "Cabinet Assembly"
+            ]
+        },
+        {
+            "name": "Moving Services",
+            "subcategories": [
+                "Local Moving",
+                "Long Distance Moving",
+                "Commercial Moving",
+                "Residential Moving",
+                "Packing and Unpacking",
+                "Storage Solutions",
+                "Senior Moving Services",
+                "Furniture Moving",
+                "Piano Moving",
+                "Small Moves"
+            ]
+        },
+        {
+            "name": "Appliances",
+            "subcategories": [
+                "Refrigerator Repair",
+                "Dishwasher Repair",
+                "Oven and Stove Repair",
+                "Washing Machine Repair",
+                "Dryer Repair",
+                "Microwave Repair",
+                "Freezer Repair",
+                "Garbage Disposal Repair",
+                "Trash Compactor Repair",
+                "Range Hood Repair"
+            ]
+        },
+        {
+            "name": "Bathroom",
+            "subcategories": [
+                "Bathroom Remodeling",
+                "Shower and Bathtub Installation",
+                "Toilet Repair and Installation",
+                "Sink and Faucet Installation",
+                "Tile Installation and Repair",
+                "Grout and Caulking Services",
+                "Plumbing Services",
+                "Exhaust Fan Installation",
+                "Bathroom Lighting Installation",
+                "Bathroom Vanity Installation",
+                "Mirror Installation",
+                "Towel Rack and Hook Installation",
+                "Handicap Accessible Bathroom Installation"
+            ]
+        }
+
+    ]
+    const categoryElements = document.querySelectorAll(".category");
+    const searchBox = document.querySelector(".search-box");
+
+    // Add subcategories to each category
+    categoryElements.forEach(category => {
+        const categoryName = category.dataset.category;
+        const subcategories = categories.find(category => category.name === categoryName).subcategories;
+        const subcategoryElements = subcategories.map(subcategory => {
+            const subcategoryElement = document.createElement("div");
+            subcategoryElement.classList.add("subcategory", "hidden");
+
+            subcategoryElement.textContent = subcategory;
+            subcategoryElement.addEventListener("click", () => {
+                console.log(`Selected ${subcategory} in ${categoryName}`);
+            });
+            return subcategoryElement;
+        });
+        category.append(...subcategoryElements);
+
+        // Add event listener to show/hide subcategories
+        category.addEventListener("click", () => {
+            subcategoryElements.forEach(subcategory => {
+                subcategory.classList.toggle("hidden");
+            });
+        });
     });
 
-    // Part 2
-    const part2BackBtn = document.querySelector('#part-2-back');
-    const part2NextBtn = document.querySelector('#part-2-next');
-    part2BackBtn.addEventListener('click', () => {
-        part2.style.display = 'none';
-        part1.style.display = 'flex';
-        part1.style.flexDirection = 'column';
-        part1.style.alignItems = 'center';
-        part1.style.gap = '20px';
-    });
-    part2NextBtn.addEventListener('click', () => {
-        part2.style.display = 'none';
-        part3.style.display = 'flex';
-        part3.style.flexDirection = 'column';
-        part3.style.alignItems = 'center';
-        part3.style.gap = '20px';
-        // Populate hidden fields for form submission
-        const jobTypeInput = document.querySelector('#job-type');
-        const jobDetailsInput = document.querySelector('#job-details');
-        const estimatedQuoteInput = document.querySelector('#estimated-quote');
-        jobTypeInput.value = document.querySelector('#job').value;
-        jobDetailsInput.value = document.querySelector('#details').value;
-        estimatedQuoteInput.value = document.querySelector('#quote').value;
+    // Add search functionality
+    searchBox.addEventListener("input", () => {
+        const searchTerm = searchBox.value.toLowerCase();
+        categoryElements.forEach(category => {
+            const categoryName = category.dataset.category.toLowerCase();
+            let foundSubcategory = false;
+            category.querySelectorAll(".subcategory").forEach(subcategory => {
+                const subcategoryName = subcategory.textContent.toLowerCase();
+                if (subcategoryName.includes(searchTerm)) {
+                    foundSubcategory = true;
+                }
+            });
+            if (categoryName.includes(searchTerm) || foundSubcategory) {
+                category.style.display = "block";
+            } else {
+                category.style.display = "none";
+            }
+        });
     });
 
-    // Part 3
-    const part3BackBtn = document.querySelector('#part-3-back');
-    part3BackBtn.addEventListener('click', () => {
-        part3.style.display = 'none';
-        part2.style.display = 'flex';
-        part2.style.flexDirection = 'column';
-        part2.style.alignItems = 'center';
-        part2.style.gap = '20px';
-    });
+    function getZip() {
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(position => {
+                const { latitude, longitude } = position.coords;
+                const apiUrl = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=jsonv2`;
 
-    // Quote calculator
-    const detailsInput = document.querySelector('#details');
-    const quoteInput = document.querySelector('#quote');
-    detailsInput.addEventListener('input', () => {
-        quoteInput.value = calculateQuote(detailsInput.value);
-    });
-
-    function calculateQuote(details) {
-        // Simple quote calculation
-        return `$${details.length * 0.5}`;
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const zipCode = data.address.postcode;
+                        console.log(zipCode);
+                        handleZip(zipCode) // Display the user's zip code
+                    })
+                    .catch(error => {
+                        console.error('Error fetching zip code:', error);
+                    });
+            }, error => {
+                console.error('Error getting current position:', error);
+            });
+        } else {
+            console.error('Geolocation is not supported by this browser');
+        }
     }
-    var zip = localStorage.getItem("zip")
-    document.getElementById('zip').value = zip
+
+    function enterZip() {
+        var zip = document.getElementById("enterZip").value
+        handleZip(zip)
+    }
+    // Get the modal
+    const modal = document.getElementById("zipModal");
+
+    // Get the button that opens the modal
+    const btn = document.querySelector(".open-button");
+
+    // Get the <span> element that closes the modal
+    const span = document.getElementsByClassName("close-button")[0];
+
+    // When the user clicks on the button, open the modal
+    function openModal() {
+        modal.style.display = "block";
+    }
+
+    //Open the modal if zip is not defined
+    try {
+        var zip = localStorage.getItem("zip")
+        if (zip) {
+            document.getElementById('zipCode').innerHTML = `  ${zip}`
+            document.getElementById("enable").style.display = "none"
+            document.getElementById("location").style.display = "block"
+        } else {
+            openModal()
+                    document.getElementById("enable").style.display = "block"
+        document.getElementById("location").style.display = "none"
+        }
+    } catch (error) {
+        openModal()
+                document.getElementById("enable").style.display = "block"
+        document.getElementById("location").style.display = "none"
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+
+    function handleZip(zip) {
+        localStorage.setItem("zip", zip);
+        document.getElementById("zipCode").innerHTML = ` ${zip}`
+        document.getElementById("enable").style.display = "none"
+        document.getElementById("location").style.display = "block"
+        closeModal()
+    }
     </script>
 </body>
 
