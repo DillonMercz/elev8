@@ -890,7 +890,7 @@ form {
 
             subcategoryElement.textContent = subcategory;
             subcategoryElement.addEventListener("click", () => {
-                console.log(`Selected ${subcategory} in ${categoryName}`);
+                Window.location.href =`https://elev8.cards/book?subcategory=${subcategory}&category=${categoryName}`;
             });
             return subcategoryElement;
         });
