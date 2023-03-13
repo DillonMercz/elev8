@@ -3,9 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="title">
-      Invoice Generator | Made with AlpineJS and TailwindCSS
-    </title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
 
 
@@ -44,61 +41,61 @@
     <!-- Search Engine -->
     <meta
       name="description"
-      content="Website made to generate invoice based on user inputs, looking to improve the way that we generate fast invoices. Made with AlpineJS, TailwindCSS and Heroicons."
+      content="Generate fast invoices for the services you provide."
     />
     <meta
       name="image"
-      content="https://invoicegenerator.now.sh/static/og.jpg"
+      content="https://i.imgur.com/AuINjvO.png"
     />
 
     <!-- Schema.org for Google -->
     <meta
       itemprop="name"
-      content="Invoice Generator | Made with AlpineJS and TailwindCSS"
+      content="Invoice Generator | Made by Elev8"
     />
     <meta
       itemprop="description"
-      content="Website made to generate invoice based on user inputs, looking to improve the way that we generate fast invoices. Made with AlpineJS, TailwindCSS and Heroicons."
+      content="Generate fast invoices for the services you provide."
     />
     <meta
       itemprop="image"
-      content="https://invoicegenerator.now.sh/static/og.jpg"
+      content="https://i.imgur.com/AuINjvO.png"
     />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Invoice Generator | Made with AlpineJS and TailwindCSS"
+      content="Invoice Generator | Made by Elev8"
     />
     <meta
       name="twitter:description"
-      content="Website made to generate invoice based on user inputs, looking to improve the way that we generate fast invoices. Made with AlpineJS, TailwindCSS and Heroicons."
+      content="Generate fast invoices for the services you provide."
     />
-    <meta name="twitter:site" content="@danestves" />
-    <meta name="twitter:creator" content="@danestves" />
+    <meta name="twitter:site" content="@elev8.cards" />
+    <meta name="twitter:creator" content="@elev8.cards" />
     <meta
       name="twitter:image:src"
-      content="https://invoicegenerator.now.sh/static/og.jpg"
+      content="https://i.imgur.com/AuINjvO.png"
     />
 
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta
       name="og:title"
-      content="Invoice Generator | Made with AlpineJS and TailwindCSS"
+      content="Invoice Generator | Made by Elev8"
     />
     <meta
       name="og:description"
-      content="Website made to generate invoice based on user inputs, looking to improve the way that we generate fast invoices. Made with AlpineJS, TailwindCSS and Heroicons."
+      content="Generate fast invoices for the services you provide."
     />
     <meta
       name="og:image"
-      content="https://invoicegenerator.now.sh/static/og.jpg"
+      content="https://i.imgur.com/AuINjvO.png"
     />
-    <meta name="og:url" content="https://invoicegenerator.now.sh/" />
+    <meta name="og:url" content="https://elev8.cards/invoice" />
     <meta
       name="og:site_name"
-      content="Invoice Generator | Made with AlpineJS and TailwindCSS"
+      content="Invoice Generator | Made by Elev8"
     />
     <meta name="og:locale" content="en_US" />
     <meta name="og:type" content="website" />
@@ -108,6 +105,27 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css"
     />
+        <!-- Primary Meta Tags -->
+    <title>Elev8 Home Services - Create Invoice</title>
+    <meta name="title" content="Elev8 Home Services - Book Now">
+    <meta name="description" content="Book Home Services With A Tap.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elev8.cards/invoice">
+    <meta property="og:title" content="Elev8 Home Services - Book Now">
+    <meta property="og:description" content="Book Home Services With A Tap.">
+    <meta property="og:image" content="https://i.imgur.com/AuINjvO.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elev8.cards/invoice">
+    <meta property="twitter:title" content="Elev8 Home Services - Book Now">
+    <meta property="twitter:description" content="Book Home Services With A Tap.">
+    <meta property="twitter:image" content="https://i.imgur.com/AuINjvO.png">
+    <meta name="description" content="Elev8 - Services ">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
   </head>
   <style type="text/css">
 /* purgecss start ignore */
@@ -260,8 +278,48 @@
 .top-1\/2 {
   top: 50%;
 }
+        .navbar-toggle{
+            background-color: white;
+        }
+        .navbar-fixed-top{
+background-color: black;
+}
+.white{
+    margin-top: 10px;
+    color: white !important;
+}
     
   </style>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <div class="navbar-left logo">
+                    <img src="https://i.imgur.com/DVbdCW5.png" heigth="90px" width="140px">
+                </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a class="white" href="#intro">Home</a></li>
+                    <li><a class="white" href="#about">About</a></li>
+                    <li><a class="white" href="#portfolio">Menu</a></li>
+                    <li><a class="white" href="#contact">Reserve</a></li>
+                </ul>
+                <button type="button" class="button" style="
+                    padding: 10px;
+                    margin-top: 12px;
+                    background: #C78B05;
+                    color: white;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                ">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </nav>
   <body class="antialiased bg-gray-200 sans-serif">
     <header
       class="px-5 py-4 transition-all duration-200 bg-white shadow-lg dark:bg-blue-900"
